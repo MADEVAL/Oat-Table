@@ -1,6 +1,6 @@
 {
   "name": "@globus.studio/oat-table",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "description": "Semantic sortable, filterable, selectable table enhancement for Oat UI",
   "homepage": "https://github.com/MADEVAL/Oat-Table",
