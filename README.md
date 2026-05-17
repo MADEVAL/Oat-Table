@@ -14,22 +14,24 @@ The table remains readable and usable without JavaScript. With JavaScript enable
 
 ## Install
 
-```html
-<link rel="stylesheet" href="https://oat.ink/oat.min.css">
-<link rel="stylesheet" href="./dist/oat-table.min.css">
-<script src="https://oat.ink/oat.min.js" defer></script>
-<script src="./dist/oat-table.min.js" defer></script>
-```
-
-Or with npm once published:
+With npm:
 
 ```bash
-npm install @oat-ui/oat-table
+npm install @globus.studio/oat-table
 ```
 
 ```js
-import '@oat-ui/oat-table/dist/oat-table.min.css';
-import '@oat-ui/oat-table/dist/oat-table.min.js';
+import '@globus.studio/oat-table/css';
+import '@globus.studio/oat-table';
+```
+
+From a CDN:
+
+```html
+<link rel="stylesheet" href="https://oat.ink/oat.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@globus.studio/oat-table@0.1.0/dist/oat-table.min.css">
+<script src="https://oat.ink/oat.min.js" defer></script>
+<script src="https://unpkg.com/@globus.studio/oat-table@0.1.0/dist/oat-table.min.js" defer></script>
 ```
 
 ## Basic Usage
@@ -179,6 +181,16 @@ npm run check
 ```
 
 `npm run check` builds `dist/` and runs the DOM test suite.
+
+## Publishing
+
+```bash
+npm run check
+npm publish --dry-run
+npm publish
+```
+
+The package is configured for public scoped npm publishing with `publishConfig.access`.
 
 ## License
 

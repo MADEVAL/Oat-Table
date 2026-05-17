@@ -1,12 +1,15 @@
 {
-  "name": "@oat-ui/oat-table",
+  "name": "@globus.studio/oat-table",
   "version": "0.1.0",
   "license": "MIT",
   "description": "Semantic sortable, filterable, selectable table enhancement for Oat UI",
-  "homepage": "https://github.com/oat-ui/oat-table",
+  "homepage": "https://github.com/MADEVAL/Oat-Table",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oat-ui/oat-table.git"
+    "url": "git+https://github.com/MADEVAL/Oat-Table.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MADEVAL/Oat-Table/issues"
   },
   "keywords": [
     "oat",
@@ -26,10 +29,34 @@
   "style": "dist/oat-table.css",
   "unpkg": "dist/oat-table.min.js",
   "jsdelivr": "dist/oat-table.min.js",
+  "exports": {
+    ".": "./dist/oat-table.js",
+    "./css": "./dist/oat-table.css",
+    "./css/min": "./dist/oat-table.min.css",
+    "./min": "./dist/oat-table.min.js",
+    "./dist/oat-table.css": "./dist/oat-table.css",
+    "./dist/oat-table.js": "./dist/oat-table.js",
+    "./dist/oat-table.min.css": "./dist/oat-table.min.css",
+    "./dist/oat-table.min.js": "./dist/oat-table.min.js",
+    "./src/table.css": "./src/table.css",
+    "./src/table.js": "./src/table.js",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": [
+    "dist/*.css",
+    "dist/*.js",
+    "src/*.css",
+    "src/*.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "node scripts/build.js",
     "test": "node --test tests/*.test.js",
     "check": "npm run build && npm test",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run check",
     "clean": "node scripts/clean.js"
   },
   "peerDependencies": {
