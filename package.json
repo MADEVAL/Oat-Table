@@ -23,6 +23,7 @@
     "dist/",
     "src/",
     "README.md",
+    "screenshot.jpg",
     "LICENSE"
   ],
   "main": "dist/oat-table.js",

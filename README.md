@@ -12,6 +12,8 @@ Oat Table is a small, zero-runtime-dependency extension for Oat. It keeps the na
 
 The table remains readable and usable without JavaScript. With JavaScript enabled, `<ot-table>` wires up keyboard-friendly sort buttons, ARIA sort state, filter state, selection state, and events.
 
+![Oat Table customer table demo](screenshot.jpg)
+
 ## Install
 
 With npm:
