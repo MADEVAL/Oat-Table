@@ -1,0 +1,47 @@
+{
+  "name": "@oat-ui/oat-table",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Semantic sortable, filterable, selectable table enhancement for Oat UI",
+  "homepage": "https://github.com/oat-ui/oat-table",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oat-ui/oat-table.git"
+  },
+  "keywords": [
+    "oat",
+    "ui",
+    "table",
+    "sortable",
+    "filter",
+    "zero-dependency"
+  ],
+  "files": [
+    "dist/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "dist/oat-table.js",
+  "style": "dist/oat-table.css",
+  "unpkg": "dist/oat-table.min.js",
+  "jsdelivr": "dist/oat-table.min.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node --test tests/*.test.js",
+    "check": "npm run build && npm test",
+    "clean": "node scripts/clean.js"
+  },
+  "peerDependencies": {
+    "@knadh/oat": ">=0.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@knadh/oat": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.5",
+    "jsdom": "^24.1.3"
+  }
+}

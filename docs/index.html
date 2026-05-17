@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oat Table</title>
+  <link rel="stylesheet" href="https://oat.ink/oat.min.css">
+  <link rel="stylesheet" href="../src/table.css">
+  <style>
+    body {
+      padding-block: var(--space-8);
+    }
+
+    .container {
+      max-width: 1080px;
+    }
+
+    header.hero {
+      margin-block-end: var(--space-8);
+    }
+
+    .demo-actions {
+      justify-content: flex-end;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1>Oat Table</h1>
+      <p class="text-light">A semantic table enhancement for Oat UI. Sort, filter, and select rows while keeping native table markup.</p>
+      <p class="hstack">
+        <a class="button" href="../README.md">Read docs</a>
+        <a class="button outline" href="https://github.com/knadh/oat">Oat UI</a>
+      </p>
+    </header>
+
+    <ot-table empty-text="No customers match this search" data-sticky>
+      <form data-table-toolbar role="search" onsubmit="return false">
+        <label>
+          Search customers
+          <input type="search" data-table-filter placeholder="Name, plan, status, city">
+        </label>
+
+        <div class="hstack demo-actions">
+          <output data-table-selected aria-live="polite"></output>
+          <output data-table-status aria-live="polite"></output>
+        </div>
+      </form>
+
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"><input type="checkbox" data-table-select-all aria-label="Select all visible customers"></th>
+              <th scope="col" data-sort>Name</th>
+              <th scope="col" data-sort>Plan</th>
+              <th scope="col" data-sort="number">MRR</th>
+              <th scope="col" data-sort>Status</th>
+              <th scope="col" data-sort="date">Last seen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-filter-text="ada lovelace pro active london">
+              <td><input type="checkbox" data-table-select-row value="ada" aria-label="Select Ada Lovelace"></td>
+              <td><strong>Ada Lovelace</strong><br><small class="text-light">ada@example.com</small></td>
+              <td>Pro</td>
+              <td data-sort-value="420">$420</td>
+              <td><span class="badge" data-variant="success">Active</span></td>
+              <td><time datetime="2026-05-15">15 May 2026</time></td>
+            </tr>
+            <tr data-filter-text="grace hopper enterprise active new york">
+              <td><input type="checkbox" data-table-select-row value="grace" aria-label="Select Grace Hopper"></td>
+              <td><strong>Grace Hopper</strong><br><small class="text-light">grace@example.com</small></td>
+              <td>Enterprise</td>
+              <td data-sort-value="2400">$2,400</td>
+              <td><span class="badge" data-variant="success">Active</span></td>
+              <td><time datetime="2026-05-12">12 May 2026</time></td>
+            </tr>
+            <tr data-filter-text="alan turing starter pending manchester">
+              <td><input type="checkbox" data-table-select-row value="alan" aria-label="Select Alan Turing"></td>
+              <td><strong>Alan Turing</strong><br><small class="text-light">alan@example.com</small></td>
+              <td>Starter</td>
+              <td data-sort-value="79">$79</td>
+              <td><span class="badge" data-variant="warning">Pending</span></td>
+              <td><time datetime="2026-04-28">28 Apr 2026</time></td>
+            </tr>
+            <tr data-filter-text="katherine johnson pro blocked virginia">
+              <td><input type="checkbox" data-table-select-row value="katherine" aria-label="Select Katherine Johnson"></td>
+              <td><strong>Katherine Johnson</strong><br><small class="text-light">katherine@example.com</small></td>
+              <td>Pro</td>
+              <td data-sort-value="620">$620</td>
+              <td><span class="badge" data-variant="danger">Blocked</span></td>
+              <td><time datetime="2026-05-01">1 May 2026</time></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </ot-table>
+  </main>
+
+  <script src="../src/table.js"></script>
+</body>
+</html>
