@@ -1,5 +1,8 @@
 # Oat Table
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![npm](https://img.shields.io/badge/npm-@globus.studio%2Foat--table-red.svg)](https://www.npmjs.com/package/@globus.studio/oat-table)
+
 > Semantic table enhancement for [Oat UI](https://github.com/knadh/oat). Sort, filter, and select rows without turning tables into a framework widget.
 
 Oat Table is a small, zero-runtime-dependency extension for Oat. It keeps the native `<table>` as the source of truth and adds progressive behavior around it:
